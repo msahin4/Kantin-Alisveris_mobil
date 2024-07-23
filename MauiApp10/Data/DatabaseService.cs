@@ -6,7 +6,7 @@ namespace MauiApp10
 {
     public class DatabaseService
     {
-        private const string ConnectionString = "Server=kantin.database.windows.net;Database=Kantin;User Id=kantinAdmin;Password=kantin123.;";
+        private const string ConnectionString = "" //Azure DB baglantısı;
         public SqlConnection SqlConnection { get; private set; }
 
         public DatabaseService()
