@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp10.limitGuncelle"
+             Title="Harcama Limiti Güncelle">
+    <VerticalStackLayout
+        VerticalOptions="CenterAndExpand"
+        HorizontalOptions="CenterAndExpand"
+        Spacing="20">
+
+        <Label 
+            Text="Yeni günlük harcama limitini giriniz."
+            FontSize="20"
+            HorizontalOptions="Center" />
+
+        <Entry x:Name="inputLimit"
+            Placeholder="Günlük limit"
+            FontSize="20"
+            HorizontalOptions="Center"
+            WidthRequest="200"
+            Keyboard="Numeric"/>
+
+        <Button 
+            Text="Kaydet"
+            FontSize="20"
+            HorizontalOptions="Center"
+            Clicked="kaydetClicked"
+            WidthRequest="200"/>
+    </VerticalStackLayout>
+</ContentPage>

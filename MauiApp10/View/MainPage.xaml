@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp10.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="95"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+
+
+            <Frame CornerRadius="20"
+           BackgroundColor="LightGray"
+           Padding="30">
+                <StackLayout>
+                    <Label Text="Mevcut Bakiye"
+                   FontSize="20"
+                   HorizontalOptions="Center"/>
+                    <Label x:Name="myLabel"
+                   FontSize="60"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"/>
+
+                </StackLayout>
+            </Frame>
+
+            <Button Text="Bakiye Yükle"
+                    FontSize="20"
+                    HorizontalOptions="Center"
+                    Clicked="BakiyeYukle_Clicked"
+                    WidthRequest="350"/>
+
+            <Button Text="Günlük Harcama Limitini Güncelle"
+                    FontSize="20"
+                    HorizontalOptions="Center"
+                    Clicked="harcamaLimiti_Clicked"
+                    WidthRequest="350"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

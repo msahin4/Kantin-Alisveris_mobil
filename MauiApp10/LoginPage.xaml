@@ -1,0 +1,53 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp10.LoginPage"
+             BackgroundColor="#f0f4f7">
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="30">
+
+        <Frame BackgroundColor="White" CornerRadius="10" Padding="20" HasShadow="True">
+            <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+
+                <Label Text="Giriş Yap" 
+                       VerticalOptions="CenterAndExpand" 
+                       HorizontalOptions="CenterAndExpand"
+                       FontSize="24"
+                       FontAttributes="Bold"
+                       TextColor="#333" />
+
+                <Entry x:Name="usernameEntry" 
+                       Placeholder="Kullanıcı Adı" 
+                       Margin="0,10,0,5" 
+                       BackgroundColor="#eef2f5" 
+                       HeightRequest="40" 
+                       PlaceholderColor="#999"
+                       TextColor="#333" />
+
+                <Entry x:Name="passwordEntry" 
+                       Placeholder="Şifre" 
+                       IsPassword="True" 
+                       Margin="0,5,0,20" 
+                       BackgroundColor="#eef2f5" 
+                       HeightRequest="40" 
+                       PlaceholderColor="#999"
+                       TextColor="#333" />
+
+                <Button Text="Giriş Yap" 
+                        Clicked="OnLoginButtonClicked" 
+                        BackgroundColor="DarkOrange" 
+                        TextColor="White"
+                        CornerRadius="20"
+                        HeightRequest="45"
+                        WidthRequest="200"
+                        HorizontalOptions="Center"/>
+
+                <Button Text="Şifremi Unuttum"
+                        Clicked="OnForgotPasswordButtonClicked"
+                        BackgroundColor="Transparent"
+                        TextColor="#5a67d8"
+                        FontAttributes="Italic"
+                        Margin="0,10,0,0"
+                        HorizontalOptions="Center"/>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</ContentPage>

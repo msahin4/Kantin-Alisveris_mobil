@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp10.FiyatListesi"
+             Title="Mevcut Fiyat Listesi">
+    <StackLayout>
+        <!-- Başlık satırı -->
+        <Grid BackgroundColor="LightGray" Padding="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Text="Ürün Adı" FontAttributes="Bold" HorizontalTextAlignment="Center" />
+            <Label Grid.Column="1" Text="Marka" FontAttributes="Bold" HorizontalTextAlignment="Center" />
+            <Label Grid.Column="2" Text="Fiyat" FontAttributes="Bold" HorizontalTextAlignment="Center" />
+        </Grid>
+
+        <!-- Ürünler listesi -->
+        <ListView x:Name="UrunlerCollectionView" ItemsSource="{Binding}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Text="{Binding urunAdi}" HorizontalTextAlignment="Center" />
+                            <Label Grid.Column="1" Text="{Binding marka}" HorizontalTextAlignment="Center" />
+                            <Label Grid.Column="2" Text="{Binding fiyat, StringFormat='{0} TL'}" HorizontalTextAlignment="Center" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

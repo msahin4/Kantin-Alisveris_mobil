@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Shell
+    x:Class="MauiApp10.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MauiApp10"
+    Shell.FlyoutBehavior="Disabled">
+
+    <ShellContent
+        Title="Giriş"
+        ContentTemplate="{DataTemplate local:LoginPage}"
+        Route="LoginPage" />
+
+    <TabBar>
+        <ShellContent
+            Title="Anasayfa"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage"
+            Icon="home_icon.svg"/>
+
+        <ShellContent
+            Title="Alışveriş"
+            ContentTemplate="{DataTemplate local:History}"
+            Icon="history_icon.svg"/>
+
+        <ShellContent
+            Title="Fiyat Listesi"
+            ContentTemplate="{DataTemplate local:FiyatListesi}"
+            Icon="list_icon.svg"/>
+
+        <ShellContent
+            Title="Ayarlar"
+            ContentTemplate="{DataTemplate local:Settings}"
+            Icon="settings_icon.svg"/>
+    </TabBar>
+
+
+</Shell>
